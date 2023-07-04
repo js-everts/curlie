@@ -52,6 +52,8 @@ func (j *JSON) Write(p []byte) (n int, err error) {
 			case b:
 				j.lastQuote = 0
 				cp = append(cp, b)
+			default:
+				cp = append(cp, b)
 			}
 			continue
 		default:
